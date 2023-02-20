@@ -17,6 +17,7 @@ def main():
     show_mammal_info(mammal)
     show_mammal_info(dog)
     show_mammal_info(cat)
+    show_mammal_info('Zebra')  # this is a string object not mammal object!
 
     '''''''''
     mammal.show_species()
@@ -35,8 +36,12 @@ def main():
 
 
 def show_mammal_info(creature):  # function for doing commented code above
-    creature.show_species()
-    creature.make_sound()
+    if isinstance(creature, animals.Mammal):
+        creature.show_species()
+        creature.make_sound()
+    else:
+        # checks for appropriate object
+        print(f"{creature} is not from the animal class")
 
 
 # Call the main function.
