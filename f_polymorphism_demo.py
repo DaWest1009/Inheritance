@@ -14,6 +14,11 @@ def main():
     print('Here are some animals and')
     print('the sounds they make.')
     print('--------------------------')
+    show_mammal_info(mammal)
+    show_mammal_info(dog)
+    show_mammal_info(cat)
+
+    '''''''''
     mammal.show_species()
     mammal.make_sound()
 
@@ -26,6 +31,12 @@ def main():
 
     cat.show_species()
     cat.make_sound()
+'''''
+
+
+def show_mammal_info(creature):  # function for doing commented code above
+    creature.show_species()
+    creature.make_sound()
 
 
 # Call the main function.
