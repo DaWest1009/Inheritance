@@ -3,13 +3,23 @@
 class Person:
 
     def __init__(self, name, addr, phone):
-        self.__name = name
+        self.__name = name  # hidden attributes can't be passed down through inheritance
         self.__addr = addr
         self.__phone = phone
 
+    def get_name(self):
+        return self.__name
+
+    def get_addr(self):
+        return self.__addr
+
+    def get_phone(self):
+        return self.__phone
+
     def print_person(self):
-        print(
-            f"Name: {self.__name} Address: {self.__addr} Phone: {self.__phone}")
+        print('Name:', self.__name)
+        print('Address:', self.__addr)
+        print('Phone:', self.__phone)
 
 
 class Customer(Person):
@@ -21,4 +31,11 @@ class Customer(Person):
         self.__on_mail_list = on_mail_list
 
     def print_person(self):
-        print(f"{Person.print_person(self)} Customer Number: {self.__cust_num} On Mailing List: {self.__on_mail_list}")
+        # to access superclass attributes just call the method
+        Person.print_person(self)
+
+        print("Customer Number:",  self.__cust_num)
+        if self.__on_mail_list:  # aka if self.__on_mail_list == True
+            print("On Mailing List: Yes")
+        else:
+            print("Off Mailing List: No")

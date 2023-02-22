@@ -7,6 +7,7 @@ def main():
                            '314-986-1114', '892582443', True)
 
     show_person_info(person)
+    print()
     show_person_info(customer)
 
 
