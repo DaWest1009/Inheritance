@@ -21,5 +21,4 @@ class Customer(Person):
         self.on_mail_list = on_mail_list
 
     def print_person(self):
-        print(f"Name: {self.__name} Address: {self.__addr} Phone: {self.__phone}
-              Customer Number: {self.__customer_number}, On Mailing List: {self.__on_mailing_list}
+        print(f"Name: {self.__name} Address: {self.__addr} Phone: {self.__phone} Customer Number: {self.__customer_number}, On Mailing List: {self.__on_mailing_list}")
