@@ -1,7 +1,7 @@
 # This program creates a Car object, a Truck object,
 # and an SUV object.
 
-import vehicles
+import e_vehicles as vehicles
 
 def main():
     # Create a Car object for a used 2001 BMW
